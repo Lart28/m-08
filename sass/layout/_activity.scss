@@ -1,0 +1,41 @@
+
+@media screen and (min-width: $desktop) {
+  .activity-list {
+    display: flex;
+    &__item {
+      width: calc((100% - 60px) / 3);
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__card {
+      position: relative;
+      img {
+        display: block;
+      }
+    }
+    &__text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 370px;
+      height: 70px;
+
+      background: rgba(47, 48, 58, 0.8);
+      font-weight: 700;
+      color: $primary-white;
+      text-transform: uppercase;
+      text-align: center;
+      p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.subscribe {
+  display: block;
+  .button {
+    margin: 0 auto;
+  }
+  &__label {
+    display: block;
+    @media screen and (min-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: $main-font;
+    font-weight: 700;
+    line-height: 0.85;
+    color: $primary-white;
+    letter-spacing: 0.03em;
+  }
+  &__input {
+    margin-top: 20px;
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
+    padding-left: 16px;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: border-color $timing-animation;
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+  &__icon {
+    display: inline-flex;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .subscribe {
+    width: 570px;
+    margin-left: 93px;
+    &__form {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__label {
+      display: block;
+      margin-bottom: 0;
+    }
+    &__input {
+      width: 358px;
+    }
+  }
+}

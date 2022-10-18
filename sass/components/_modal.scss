@@ -1,0 +1,196 @@
+.backdrop {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* visibility: hidden; */
+    transition: transform $timing-animation, opacity $timing-animation;
+  }
+}
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $timing-animation, opacity $timing-animation;
+
+  width: 90%;
+  height: 80%;
+  border-radius: 4px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+    transition: transform $timing-animation, opacity $timing-animation;
+  }
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  &__close-icon {
+    transition: fill $timing-animation;
+    .modal__close-button:hover &,
+    .modal__close-button:focus & {
+      fill: $accent-color;
+    }
+  }
+  &__title {
+    display: block;
+    width: 75%;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto 30px auto;
+
+    font-size: 20px;
+    color: $heading-color;
+  }
+}
+
+.form {
+  margin: 0 40px;
+  &__field {
+    position: relative;
+
+    margin-bottom: 28px;
+  }
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    transition: transform $timing-animation;
+    .form__input:focus + &,
+    .form__input:not(:placeholder-shown) + & {
+      transform: translate(-42px, -40px);
+    }
+  }
+  &__label-comment {
+    position: absolute;
+    top: 15%;
+    left: 18px;
+    transform: translateY(-50%);
+    transition: transform $timing-animation;
+    .form__input-comment:focus + &,
+    .form__input-comment:not(:placeholder-shown) + & {
+      transform: translate(-18px, -40px);
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    .form__input:focus ~ & {
+      fill: $accent-color;
+    }
+  }
+  &__input-comment {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+    }
+  }
+  &__checkbox-policy {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  &__checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+  &__policy {
+    display: flex;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+      margin-left: 3px;
+      color: $accent-color;
+      text-decoration: underline;
+    }
+  }
+  &__custom-checkbox {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .form__checkbox:checked + & {
+      border-color: $accent-color;
+      background-color: $accent-color;
+      background-image: url(../images/form-checkbox.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+    }
+  }
+}
+@media screen and (min-width:$mobile) {
+  .modal {
+    position: absolute;
+    width: 450px;
+    height: 609px;
+    &__title {
+      width: 418px;
+      margin-top: 40px auto 30px auto;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}

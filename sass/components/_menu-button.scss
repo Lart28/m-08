@@ -1,0 +1,143 @@
+.button-animated {
+  width: 3em;
+  height: 3em;
+  position: relative;
+  z-index: 2;
+}
+.button-animated:hover .bit-1,
+.button-animated:hover .bit-1::before,
+.button-animated:hover .bit-1::after,
+.button-animated:hover .bit-2,
+.button-animated:hover .bit-3,
+.button-animated:hover .bit-3::before,
+.button-animated:hover .bit-3::after {
+  background: $accent-color;
+}
+.button-animated .bit-1::before {
+  content: '';
+  left: 0.5em;
+  top: 0.5em;
+  position: absolute;
+  width: 1em;
+  transform-origin: left bottom;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, top 0.3s;
+}
+.button-animated .bit-1::after {
+  content: '';
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  transform-origin: right bottom;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, top 0.3s;
+}
+.button-animated .bit-2 {
+  position: absolute;
+  width: 2em;
+  top: 50%;
+  left: 50%;
+  height: 0.3em;
+  background: #2e313c;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s 0.3s, width 0.3s 0.6s;
+}
+.button-animated .bit-3::before {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  width: 1em;
+  transform-origin: left top;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, bottom 0.3s;
+}
+.button-animated .bit-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  width: 1em;
+  transform-origin: right top;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, bottom 0.3s;
+}
+.button-animated.open .bit-1:before {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: left bottom;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
+}
+.button-animated.open .bit-1:after {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: right bottom;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
+}
+.button-animated.open .bit-2 {
+  width: 0.3em;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.3s 0.3s, width 0.3s;
+}
+.button-animated.open .bit-3:before {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
+}
+.button-animated.open .bit-3:after {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: right top;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
+}
+@media screen and (min-width:$tablet) {
+  .button-animated{
+    display: none;
+  }
+}
+//
+
+// .menu-button {
+//   z-index: 1;
+//   display: inline-flex;
+//   padding: 0;
+//   margin: 0;
+//   border: none;
+//   background-color: transparent;
+
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+// }
+// .icon-cross {
+//   opacity: 0;
+//   .menu-button:hover &,
+//   .menu-button:focus & {
+//     fill: $accent-color;
+//   }
+//   // fill: $heading-color;
+//   .menu-button.is-open & {
+//     opacity: 1;
+//   }
+// }
+// .menu-button.is-open .icon-menu {
+//   opacity: 0;
+// }
+// .icon-menu {
+//   // fill: $heading-color;
+//   .menu-button:hover &,
+//   .menu-button:focus & {
+//     fill: $accent-color;
+//   }
+//   opacity: 1;
+// }

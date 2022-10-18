@@ -1,0 +1,38 @@
+.client-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  &__item {
+    width: calc(50% - 15px);
+    max-width: 210px;
+    display: block;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    border: 1px solid $icon-color;
+    transition: border-color $timing-animation;
+    &:hover {
+      border-color: $accent-color;
+    }
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+
+    fill: $icon-color;
+    transition: fill $timing-animation;
+    .client-list__link:hover & {
+      fill: $accent-color;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .client-list {
+    &__item{
+      width: 170px;
+    }
+  }
+}

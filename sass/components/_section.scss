@@ -1,0 +1,38 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__title {
+    margin-bottom: 30px;
+    color: $heading-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    &--hidden {
+      display: none;
+    }
+  }
+}
+.section:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: $desktop) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &__title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
+    &:nth-child(2) {
+      padding-bottom: 47px;
+    }
+    &:nth-child(3) {
+      padding-top: 47px;
+    }
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+}

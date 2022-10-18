@@ -1,0 +1,52 @@
+// .container {
+//   width: 1200px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
+// .container {
+//   padding: 0 15px;
+// }
+
+// @media screen and (min-width: $mobile) {
+//   .container{
+//     width: $mobile;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media screen and (min-width: $tablet) {
+//   .container{
+//     width: $tablet;
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .container{
+//     width: $desktop;
+//   }
+// }
+
+.container {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: $mobile) {
+  .container{
+    width: $mobile;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container{
+    width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container{
+    width: $desktop;
+  }
+}

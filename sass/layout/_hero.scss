@@ -1,0 +1,74 @@
+.overlay {
+  max-width: 1600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 576px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero-mobile.jpg');
+    @media screen and (min-resolution: 2ppx),
+      screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Hero-mobile@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 577px) and (max-width: 960px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero-tablet.jpg');
+    @media screen and (min-resolution: 2ppx),
+      screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Hero-tablet@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 961px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero-desk.jpg');
+    @media screen and (min-resolution: 2ppx),
+      screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Hero-desk@2x.jpg');
+    }
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $accent-bcg-color;
+}
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  &__title {
+    margin-bottom: 30px;
+    color: $primary-white;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .overlay {
+    height: 600px;
+  }
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
