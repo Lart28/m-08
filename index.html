@@ -181,18 +181,18 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/activity-image.webp    370w,
-                      ./images/activity-image@2x.webp 740w
+                      images/activity/activity-image.webp    1x,
+                      images/activity/activity-image@2x.webp 2x
                     "
                     type="image/webp"
                   />
-                  <img
-                    srcset="./images/activity-image.jpg 370w, ./images/activity-image@2x.jpg 740w"
-                    src="./images/activity-image.jpg"
-                    width="370"
-                    alt="Набор кода по алгоритму"
-                    sizes="33vw"
+                  <source
+                    srcset="
+                      images/activity/activity-image.jpg    1x,
+                      images/activity/activity-image@2x.jpg 2x
+                    "
                   />
+                  <img src="images/activity/activity-image.jpg" alt="Набор кода по алгоритму" />
                 </picture>
                 <div class="activity-list__text"><p>десктопные приложения</p></div>
               </div>
@@ -202,21 +202,18 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/activity-image-2.webp    370w,
-                      ./images/activity-image-2@2x.webp 740w
+                      images/activity/activity-image-2.webp    1x,
+                      images/activity/activity-image-2@2x.webp 2x
                     "
                     type="image/webp"
                   />
-                  <img
+                  <source
                     srcset="
-                      ./images/activity-image-2.jpg    370w,
-                      ./images/activity-image-2@2x.jpg 740w
+                      images/activity/activity-image-2.jpg    1x,
+                      images/activity/activity-image-2@2x.jpg 2x
                     "
-                    src="./images/activity-image-2.jpg"
-                    width="370"
-                    alt="Подбор дизайна"
-                    sizes="33vw"
                   />
+                  <img src="images/activity/activity-image-2.jpg" alt="Подбор дизайна" />
                 </picture>
                 <div class="activity-list__text"><p>мобильные приложения</p></div>
               </div>
@@ -226,21 +223,18 @@
                 <picture>
                   <source
                     srcset="
-                      images/activity-image-3.webp    370w,
-                      images/activity-image-3@2x.webp 740w
+                      images/activity/activity-image-3.webp    1x,
+                      images/activity/activity-image-3@2x.webp 2x
                     "
                     type="image/webp"
                   />
-                  <img
+                  <source
                     srcset="
-                      images/activity-image-3.jpg    370w,
-                      images/activity-image-3@2x.jpg 740w
+                      images/activity/activity-image-3.jpg    1x,
+                      images/activity/activity-image-3@2x.jpg 2x
                     "
-                    src="images/activity-image-3.jpg"
-                    width="370"
-                    alt="Выбор цвета из палитры"
-                    sizes="33vw"
                   />
+                  <img src="images/activity/activity-image-3.jpg" alt="Выбор цвета из палитры" />
                 </picture>
                 <div class="activity-list__text"><p>дизайнерские решения</p></div>
               </div>
@@ -256,18 +250,54 @@
             <li class="teammate">
               <picture>
                 <source
-                  srcset="./images/teammate.webp 270w, ./images/teammate@2x.webp 540w"
+                  srcset="
+                    images/teammates/teammate-desktop.webp    1x,
+                    images/teammates/teammate-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
                   type="image/webp"
                 />
+                <source
+                  srcset="
+                    images/teammates/teammate-desktop.jpg    1x,
+                    images/teammates/teammate-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-tablet.webp    1x,
+                    images/teammates/teammate-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-tablet.jpg    1x,
+                    images/teammates/teammate-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-mobile.webp    1x,
+                    images/teammates/teammate-mobile@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-mobile.jpg    1x,
+                    images/teammates/teammate-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
                 <img
-                  srcset="./images/teammate.jpg 270w, ./images/teammate@2x.jpg 540w"
                   class="teammate__photo"
-                  src="./images/teammate.jpg"
-                  width="270"
+                  src="images/teammates/teammate-mobile.jpg"
                   alt="Фото Игоря Демьяненко"
-                  sizes="(min-width: 1200px) 25vw,
-                  min-width: 768px) 50vw,
-                  max-width: 480px) 100vw"
                 />
               </picture>
               <div class="teammate__info">
@@ -309,18 +339,54 @@
             <li class="teammate">
               <picture>
                 <source
-                  srcset="./images/teammate-2.webp 270w, ./images/teammate-2@2x.webp 540w"
+                  srcset="
+                    images/teammates/teammate-2-desktop.webp    1x,
+                    images/teammates/teammate-2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
                   type="image/webp"
                 />
+                <source
+                  srcset="
+                    images/teammates/teammate-2-desktop.jpg    1x,
+                    images/teammates/teammate-2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-2-tablet.webp    1x,
+                    images/teammates/teammate-2-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-2-tablet.jpg    1x,
+                    images/teammates/teammate-2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-2-mobile.webp    1x,
+                    images/teammates/teammate-2-mobile@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-2-mobile.jpg    1x,
+                    images/teammates/teammate-2-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
                 <img
-                  srcset="./images/teammate-2.jpg 270w, ./images/teammate-2@2x.jpg 540w"
                   class="teammate__photo"
-                  src="./images/teammate-2.jpg"
-                  width="270"
+                  src="images/teammates/teammate-2-mobile.jpg"
                   alt="Фото Ольги Репиной"
-                  sizes="(min-width: 1200px) 25vw,
-                  min-width: 768px) 50vw,
-                  max-width: 480px) 100vw"
                 />
               </picture>
               <div class="teammate__info">
@@ -361,18 +427,54 @@
             <li class="teammate">
               <picture>
                 <source
-                  srcset="./images/teammate-3.webp 270w, ./images/teammate-3@2x.webp 540w"
+                  srcset="
+                    images/teammates/teammate-3-desktop.webp    1x,
+                    images/teammates/teammate-3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
                   type="image/webp"
                 />
+                <source
+                  srcset="
+                    images/teammates/teammate-3-desktop.jpg    1x,
+                    images/teammates/teammate-3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-3-tablet.webp    1x,
+                    images/teammates/teammate-3-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-3-tablet.jpg    1x,
+                    images/teammates/teammate-3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-3-mobile.webp    1x,
+                    images/teammates/teammate-3-mobile@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-3-mobile.jpg    1x,
+                    images/teammates/teammate-3-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
                 <img
-                  srcset="./images/teammate-3.jpg 270w, ./images/teammate-3@2x.jpg 540w"
                   class="teammate__photo"
-                  src="./images/teammate-3.jpg"
-                  width="270"
+                  src="images/teammates/teammate-3-mobile.jpg"
                   alt="Фото Николая Тарасова"
-                  sizes="(min-width: 1200px) 25vw,
-                  min-width: 768px) 50vw,
-                  max-width: 480px) 100vw"
                 />
               </picture>
               <div class="teammate__info">
@@ -413,18 +515,54 @@
             <li class="teammate">
               <picture>
                 <source
-                  srcset="./images/teammate-4.webp 270w, ./images/teammate-4@2x.webp 540w"
+                  srcset="
+                    images/teammates/teammate-4-desktop.webp    1x,
+                    images/teammates/teammate-4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
                   type="image/webp"
                 />
+                <source
+                  srcset="
+                    images/teammates/teammate-4-desktop.jpg    1x,
+                    images/teammates/teammate-4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-4-tablet.webp    1x,
+                    images/teammates/teammate-4-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-4-tablet.jpg    1x,
+                    images/teammates/teammate-4-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-4-mobile.webp    1x,
+                    images/teammates/teammate-4-mobile@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    images/teammates/teammate-4-mobile.jpg    1x,
+                    images/teammates/teammate-4-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
                 <img
-                  srcset="./images/teammate-4.jpg 270w, ./images/teammate-4@2x.jpg 540w"
                   class="teammate__photo"
-                  src="./images/teammate-4.jpg"
-                  width="270"
+                  src="images/teammates/teammate-4-mobile.jpg"
                   alt="Фото Михаила Ермакова"
-                  sizes="(min-width: 1200px) 25vw,
-                  min-width: 768px) 50vw,
-                  max-width: 480px) 100vw"
                 />
               </picture>
               <div class="teammate__info">
@@ -519,58 +657,60 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container">
-        <div>
-          <a href="./index.html" class="logo logo--white"
-            ><span class="logo-style">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
-                <a class="address__link" href="https://goo.gl/maps/m3afnksAYCRB2p8K9">
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="footer__communications">
+          <div>
+            <a href="./index.html" class="logo logo--white"
+              ><span class="logo-style">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a class="address__link" href="https://goo.gl/maps/m3afnksAYCRB2p8K9">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__contact" href="mailto:info@example.com"> info@example.com </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__contact" href="tel:+380991111111"> +38 099 111 11 11 </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__social-container">
+            <h2 class="footer__social-title">Присоединяйтесь</h2>
+            <ul class="social-list list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="">
+                  <svg class="social-list__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address__item">
-                <a class="address__contact" href="mailto:info@example.com"> info@example.com </a>
+              <li class="social-list__item">
+                <a class="social-list__link" href="">
+                  <svg class="social-list__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__contact" href="tel:+380991111111"> +38 099 111 11 11 </a>
+              <li class="social-list__item">
+                <a class="social-list__link" href="">
+                  <svg class="social-list__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="">
+                  <svg class="social-list__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__social-container">
-          <h2 class="footer__social-title">Присоединяйтесь</h2>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscribe">
           <form class="subscribe__form">

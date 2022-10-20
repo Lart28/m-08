@@ -78,6 +78,9 @@ nav {
   .menu-social-list {
     display: flex;
     flex-wrap: wrap;
+    &__item{
+      margin-bottom: 25px;
+    }
   }
   .menu-social-list__link {
     font-weight: 500;

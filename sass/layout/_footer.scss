@@ -28,20 +28,28 @@
     }
   }
   &__social-title {
-      color: $primary-white;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+    color: $primary-white;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  &__social-container {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .footer {
+    &__communications {
+      display: flex;
+      justify-content: space-between;
     }
-    &__social-container {
-      margin-bottom: 60px;
-    }
+  }
 }
 @media screen and (min-width: $desktop) {
   .footer {
-text-align: start;
+    text-align: start;
     .logo {
       display: inline-block;
       margin-bottom: 20px;
